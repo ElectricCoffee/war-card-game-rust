@@ -4,4 +4,4 @@ version = "0.1.0"
 authors = ["electric coffee <slench102@gmail.com>"]
 
 [dependencies]
-cards = { git = "https://github.com/ElectricCoffee/cards-rust", branch = "master" }
+cards = { git = "https://github.com/ElectricCoffee/cards-rust" }
