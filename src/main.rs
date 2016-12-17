@@ -1,3 +1,7 @@
+extern crate cards;
+
 fn main() {
-    println!("Hello, world!");
+    let mut deck = cards::make_standard_deck();
+    cards::shuffle(&mut deck);
+
 }
