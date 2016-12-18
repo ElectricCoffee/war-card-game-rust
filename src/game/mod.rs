@@ -24,15 +24,7 @@ fn fill_buffer(buffer: &mut Vec<Card>, c1: Card, c2: Card, p1: &mut Deck, p2: &m
 pub fn play(mut deck1: Deck, mut deck2: Deck) {
     let mut tie_buffer = Vec::new();
 
-    loop {
-        let (maybe_card1, maybe_card2) = (deck1.pop_back(), deck2.pop_back());
-
-        if maybe_card1.is_none() || maybe_card2.is_none() {
-            return;
-        }
-
-        let (card1, card2) = (maybe_card1.unwrap(), maybe_card2.unwrap());
-
+    while let (Some(card1), Some(card2)) = (deck1.pop_back(), deck2.pop_back()) {
         println!("Player 1 ({}) plays: {}\nPlayer 2 ({}) plays: {}",
             deck1.len(), card1,
             deck2.len(), card2,
