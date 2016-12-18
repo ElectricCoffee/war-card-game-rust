@@ -12,13 +12,10 @@ fn fill_buffer(buffer: &mut Vec<Card>, c1: Card, c2: Card, p1: &mut Deck, p2: &m
     buffer.push(c1);
     buffer.push(c2);
 
-    let (mc1, mc2) = (p1.pop_back(), p2.pop_back());
-    if mc1.is_none() || mc2.is_none() {
-        return;
+    if let (Some(c1), Some(c2)) = (p1.pop_back(), p2.pop_back()) {
+        buffer.push(c1);
+        buffer.push(c2);
     }
-
-    buffer.push(mc1.unwrap());
-    buffer.push(mc2.unwrap());
 }
 
 pub fn play(mut deck1: Deck, mut deck2: Deck) {
