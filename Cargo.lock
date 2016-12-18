@@ -8,7 +8,7 @@ dependencies = [
 [[package]]
 name = "cards"
 version = "0.1.0"
-source = "git+https://github.com/ElectricCoffee/cards-rust#92c81bc4cfeb91fc542115054f4dcf61dfeed929"
+source = "git+https://github.com/ElectricCoffee/cards-rust#894a865d895bc75b0893549349cc29d4b0cf5fb9"
 dependencies = [
  "rand 0.3.15 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
